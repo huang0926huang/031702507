@@ -72,7 +72,7 @@ public class Main{
 	}
 	public static ArrayList<String>  detailAddress2(String address) //难度2，七级地址
 	{
-        String regex4="(?<province>[^省]+自治区|.*?省|.*?行政区)(?<city>[^市]+自治州|.*?地区|.*?行政单位|.+盟|市辖区|.*?市|.*?县)(?<county>[^县]+县|.+区|.+市|.+旗|.+海域|.+岛)?(?<town>[^区]+区|.+镇|.+街道)?(?<path>[^路]+路|.+街|.+巷)?(?<num>[^号]+号)?(?<village>.*)";
+        String regex4="(?<province>[^省]+自治区|.*?省|.*?行政区)(?<city>[^市]+自治州|.*?地区|.*?行政单位|.+盟|市辖区|.*?市|.*?县)(?<county>[^县]+县|.+区|.+市|.+旗|.+海域|.+岛)?(?<town>[^区]+区|.+镇|.+街道)?(?<path>[^路]+路|.+街|.+巷.+道)?(?<num>[^号]+号)?(?<village>.*)";
         Matcher m=Pattern.compile(regex4).matcher(address);
         String province=null,city=null,county=null,town=null,path=null,num=null,village=null;
         

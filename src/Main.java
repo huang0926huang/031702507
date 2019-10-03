@@ -157,11 +157,13 @@ public class Main{
                 stringBuffer.append(jsonArray.toJSONString()).append("\n");
     			bufReader.close();
     			read.close();
-    			FileWriter writer = new FileWriter(args[1]);
-    			BufferedWriter bw = new BufferedWriter(writer);
-    			bw.write(jsonArray.toString());//
-    			bw.close();
-    			writer.close();  
+    			
+    			FileOutputStream fos = new FileOutputStream(args[1]);
+    			OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
+    			osw.write(jsonArray.toString());
+    			osw.flush(); 
+
+    			 
         } catch(FileNotFoundException e)
         {
         	System.out.println("读取文件内容操作出错");

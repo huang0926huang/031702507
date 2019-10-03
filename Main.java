@@ -159,7 +159,7 @@ public class Main{
     			read.close();
     			FileWriter writer = new FileWriter(args[1]);
     			BufferedWriter bw = new BufferedWriter(writer);
-    			bw.write(stringBuffer.toString());
+    			bw.write(jsonArray.toString()); //
     			bw.close();
     			writer.close();  
         } catch(FileNotFoundException e)

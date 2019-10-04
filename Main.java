@@ -117,7 +117,7 @@ public class Main{
 	
 		try {  
 			StringBuffer stringBuffer = new StringBuffer("");
-			FileInputStream fis = new FileInputStream(args[0]);
+			FileInputStream fis = new FileInputStream("input.txt");
 			InputStreamReader read = new InputStreamReader(fis, "utf-8");
 			BufferedReader bufReader = new BufferedReader(read);
   
@@ -158,7 +158,7 @@ public class Main{
     			bufReader.close();
     			read.close();
     			
-    			FileOutputStream fos = new FileOutputStream(args[1]);
+    			FileOutputStream fos = new FileOutputStream("031702507.txt");
     			OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
     			osw.write(jsonArray.toString());
     			osw.flush(); 
